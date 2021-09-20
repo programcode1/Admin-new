@@ -1,0 +1,30 @@
+ .note-editor .note-toolbar {
+    background-color: #f3f3f3;
+    border-bottom: none;
+    position: relative;
+}
+
+.note-editor.note-frame .note-editing-area .note-editable {
+    padding: 10px;
+    overflow: auto;
+    color: #000;
+    background-color: #fff;
+    height:30vh;
+}
+
+
+.popover {
+    position: absolute;
+    top: 0;
+    left:-100%;
+    
+}
+
+.note-editor .btn-default {
+    background-color: transparent;
+    border-color: transparent !important;
+}
+
+.note-editor .btn-group-sm > .btn, .note-editor .btn-sm {
+    padding: 8px 12px !important;
+}

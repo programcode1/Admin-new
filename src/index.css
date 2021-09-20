@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
+html{
+  font-size:10px;
+}
+
+body {
+  margin: 0;
+  background-color: #2a323c !important;
+  font-family: 'PT Sans Caption', sans-serif !important;
+  margin: 0;
+  font-size: 1.4em !important;
+  color: #9fa2a7;
+  line-height: 1.42857143 !important;
+
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* vairables */
+:root {
+  --color-primary:#04A2B3;
+  --font-default:1.4rem;
+}
+

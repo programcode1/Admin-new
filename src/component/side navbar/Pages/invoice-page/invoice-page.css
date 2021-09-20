@@ -1,0 +1,32 @@
+.border-bottom{
+	border-bottom: 1px solid  rgba(159, 162, 167, 0.25) !important;
+}
+
+
+.thick-line {
+    border-bottom: 2px solid  #9fa2a7 !important;
+  
+}
+
+.font-18{
+	font-size:1.8rem;
+}
+
+.table-header{
+	background-color:#04a2b3 ;
+	padding: 1rem 2rem;
+	border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.table-header h3{
+	font-size:1.6rem ;
+	line-height: 3rem;
+	margin:0px;
+}
+.table-body{
+	padding: 2rem;
+}
+
+.table-body-btn {
+	font-size:var(--font-default);
+}

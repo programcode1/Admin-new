@@ -1,0 +1,15 @@
+.jvectormap-zoomin, .jvectormap-zoomout {
+    width: 20px;
+    height: 20px;
+    line-height:20px;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.jvectormap-zoomout{
+    top:12%;
+}
+
+
+

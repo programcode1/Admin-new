@@ -1,0 +1,10 @@
+.mdi-icons span , .ion-icons i{
+	font-size:2.8rem;
+	display:block;
+}
+.mdi-icons span:hover , .ion-icons i:hover{
+	color:#04a2b3;
+}
+.font-22{
+	font-size:2.2rem;
+}

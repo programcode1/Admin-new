@@ -1,0 +1,14 @@
+@media screen and (max-width:768px){
+	.links-menu-scorll{
+		display:none;
+		height:0px;
+	}
+
+	.right-side{
+		width:100%;
+
+	}
+	
+
+
+}

@@ -1,0 +1,186 @@
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    margin-left: auto;
+    content: "+";
+    font-size:2rem;
+     font-weight: 600;
+    background:transparent;
+    transition: unset;
+}
+
+.accordion-collapse {
+    color:#9fa2a7;
+}
+.accordion-body{
+    font-size: 1.4rem;
+   
+}
+
+.accordion-item{
+    border:none;
+    margin-top: 5px;
+    box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 10%);
+    background-color: #323c48;
+}
+
+/* blue color header  */
+.blue-bgcolor .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background:transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+   
+}
+.blue-bgcolor .accordion-button:not(.collapsed){
+    color: white;
+    box-shadow: none;
+   
+}
+
+
+
+.blue-bgcolor .accordion-header{
+   padding: 1rem 2rem;
+    background-color: #00a4fe !important;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.blue-bgcolor .accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .3rem 1.2rem;
+    font-size: 1.6rem;
+    text-align: left;
+     color: white;
+    background-color: #00a4fe !important;
+}
+
+.blue-bgcolor .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background:transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+   
+}
+
+/* white color header  */
+
+.white-bgcolor .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background:transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+
+   
+}
+.white-bgcolor .accordion-button:not(.collapsed){
+    color:black;
+    box-shadow: none;
+   
+}
+
+
+
+.white-bgcolor .accordion-header{
+   padding: 1rem 2rem;
+    background-color: #fafafa !important;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.white-bgcolor .accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .3rem 1.2rem;
+    font-size: 1.6rem;
+    text-align: left;
+     color: black;
+    background-color: #fafafa !important;
+}
+
+.white-bgcolor .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background:transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+
+   
+}
+
+
+
+
+/*tabs */
+.nav-tabs a:link,.nav-tabs a:visited{
+    color:#9fa2a7;
+    display:inline-block;
+    width:9rem;
+    height:4rem;
+    line-height:4rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.4rem;
+    
+
+}
+
+.nav-vertical a:link,.nav-tabs a:visited{
+    width:12.3rem;
+
+}
+.table-vertical .col-md-3{
+    padding-left:0px;
+   
+}
+.table-vertical .col-md-9{
+    padding-right:0px;
+      
+}
+
+
+.nav-justified .nav-tabs a:link,.nav-justified .nav-tabs a:visited{
+    
+    width:11.9rem;
+    height:4rem;
+    
+
+}
+
+
+.nav-tabs a:hover{
+    color:var(--color-primary);
+}
+.nav-tabs a.active{
+    color:white;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+.nav-tabs ul, .nav-tabs li{
+    padding: 0px;
+}
+
+.tab-content .active{
+    padding:2.5rem;
+    font-size: 1.4rem;
+    color:#9fa2a7;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    background-color:transparent !important;
+    
+}

@@ -1,0 +1,23 @@
+.validation-form label{
+	margin-bottom:.5rem;
+}
+
+
+.parsley-errors-list > li {
+    font-size: 1.2rem;
+    list-style: none;
+    color: #e66060;
+    margin-top: .5rem;
+    padding: 3px;
+}
+
+.parsley-error {
+    border-color: #e66060 !important;
+}
+.font-wgt{
+    font-weight: 100 !important;
+}
+
+.font-small{
+    font-size:1.56rem;
+}

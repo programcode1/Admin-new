@@ -1,0 +1,37 @@
+.spinner-div{
+	color: #ffffff;
+    background-color: rgba(102, 210, 3, 0.8);
+    padding: 1.5rem;
+    border-radius:.5rem;
+}
+.spinner-div p{
+	margin-bottom:0px;
+}
+.spinner-div ul {
+	list-style-type:disc;
+	padding:0px;
+	margin-left:4rem;
+
+}
+
+.spinner-div ul li{
+	
+	padding:0px;
+	
+
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.animation-spin{
+	animation:fa-spin 2s  infinite linear;;
+}

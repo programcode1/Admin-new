@@ -1,0 +1,64 @@
+.progress {
+    -webkit-box-shadow: none !important;
+    background-color: rgba(245, 245, 245, 0.2);
+    box-shadow: none !important;
+    height: 1.1rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+}
+
+.progress-bar-primary{
+    background-color: #04a2b3;
+}
+
+.progress-bar-success {
+    background-color: #66d203;
+}
+
+.progress-bar-info {
+    background-color: #00a4fe;
+}
+
+.progress-bar-warning {
+    background-color: #ffb600 !important;
+}
+
+.progress-bar-danger{
+    background-color: #e66060;
+}
+
+.progress-bar-pink {
+    background-color: #e866ff;
+}
+
+.progress-bar-purple {
+    background-color: #715ded;
+}
+
+.progress-animated {
+    -webkit-animation: progress-bar-stripes 1s linear infinite;
+    -o-animation: progress-bar-stripes 1s linear infinite;
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress-bar-body{
+    margin: 1rem -2px;
+
+}
+.progress-bar-body .col-md-6{
+    padding:0px;
+}
+
+.progress-bar-body h5{
+    font-size: 1.8rem;
+}
+.progress-bar-body h6{
+    font-size: var(--font-default);
+    margin-bottom: 1.5rem;
+    font-weight:700;
+}
+
+
+.progress-bar-container{
+    margin-bottom:4rem;
+}

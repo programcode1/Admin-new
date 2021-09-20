@@ -1,0 +1,76 @@
+{
+  "name": "adminpage",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://programcode1.github.io/Dashboard-In-react/",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@fullcalendar/daygrid": "^5.9.0",
+    "@fullcalendar/interaction": "^5.9.0",
+    "@fullcalendar/react": "^5.9.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@popperjs/core": "^2.9.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^4.0.0",
+    "chart.js": "^3.5.1",
+    "datatables.net-buttons-dt": "^2.0.0",
+    "datatables.net-dt": "^1.1.0",
+    "datatables.net-fixedheader-dt": "^3.1.9",
+    "datatables.net-keytable-dt": "^2.6.4",
+    "datatables.net-responsive-dt": "^2.2.9",
+    "jquery": "^3.6.0",
+    "jquery-knob": "^1.2.11",
+    "jquery-ui-dist": "^1.12.1",
+    "parsleyjs": "^2.9.2",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.2",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^17.0.2",
+    "react-donut-chart": "^1.1.8",
+    "react-dropzone": "^11.3.4",
+    "react-jvectormap": "0.0.16",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-summernote": "^2.0.2",
+    "react-to-print": "^2.13.0",
+    "sweetalert": "^2.1.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

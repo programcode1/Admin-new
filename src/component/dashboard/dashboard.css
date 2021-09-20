@@ -1,0 +1,105 @@
+.text-muted{
+	color:#9FA2A7 !important;
+
+}
+.bg-color{
+	background-color: #323c48;
+	border-radius: .5rem;
+	box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 10%);
+}
+
+.bg-color-body{
+	 background-color: #2a323c;
+	 padding:1rem;
+
+}
+
+/*panel 4 col section */
+
+.medium-font-size{
+	font-size: 1.6rem !important;
+}
+.small-text-size{
+	font-size:0.875em;
+}
+.text-white{
+	color: #fff;
+}
+
+.font-light {
+    font-weight:100 !important;
+}
+.panel{
+	
+	padding:1rem;
+	margin-bottom:1.5rem;
+
+	
+}
+
+.panel-heading{
+	margin-bottom: 1.5rem;
+}
+.panel-body h2{
+	margin-bottom: 1.5rem;
+}
+
+.panel-body h2 b{
+	font-size: 3rem;
+}
+
+
+
+/*chart section */
+.chart-list{
+	display: flex;
+	list-style: none;
+}
+
+.chart-heading{
+	padding-left: 1.2rem;
+	padding-top: 1rem;
+}
+
+.chart-heading h5 ,.chart-list h5{
+	font-size: 1.8rem;
+}
+.chart-list{
+	padding-left:.6rem;
+}
+
+.dount-div{
+	width: 100%;
+	height:100%;
+
+
+}
+
+
+
+.dountchart{
+	width:80%;
+	height:80%;
+	
+	
+}
+
+.dountchart-innertext-label{
+	font-size:1rem;
+	font-weight:900;
+	fill:white;
+	
+}
+.dountchart-innertext-value{
+	
+	fill:white;
+}
+
+
+
+ .selected {
+	opacity:1;
+	stroke-width:3;
+	
+}
+

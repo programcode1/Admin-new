@@ -1,0 +1,99 @@
+.thead-color tr td{
+	color: #fff;
+
+}
+
+table.dataTable tbody tr td{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2)  !important;
+}
+
+table.dataTable tbody tr {
+    background-color:transparent; 
+  
+}
+
+table.dataTable {
+    border-collapse:collapse;
+  	
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper  {
+    color: #9fa2a7; 
+}
+
+.dataTables_wrapper .dataTables_length select{
+   color: #fff;
+}
+.dataTables_wrapper .dataTables_paginate{
+	padding-top:10px;
+	
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    
+    color: #fff !important;
+    border-radius: 0px;
+    margin-left: -1px;
+    background-color: #2a323c !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover , .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+	background:transparent;
+	color:#fff !important;
+	background-color: transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+   background-color: #04a2b3 !important;
+    border-color: #04a2b3 !important;
+    background: transparent;
+
+  
+}
+
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    cursor: not-allowed;
+    color: #fff !important; 
+    border: 1px solid black;
+    background: transparent;
+    box-shadow: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.dataTables_wrapper .dataTables_paginate .next{
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+[type=search] {
+	color: #fff;
+}
+
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper {
+	margin-bottom: 20px;
+
+}
+
+
+.dataTables_wrapper .dataTables_length select{
+	width: 70px;
+	font-size:12px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background-color: #2a323c;
+}
+.dataTables_wrapper .dataTables_filter input{
+	font-size:12px;
+	background-color:#2a323c;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.dataTables_wrapper .dataTables_length select:focus ,.dataTables_wrapper .dataTables_filter input:focus{
+  background: #2a323c;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+

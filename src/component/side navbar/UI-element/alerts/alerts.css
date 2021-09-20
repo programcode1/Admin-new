@@ -1,0 +1,38 @@
+
+
+.alert a{
+    color: #e6e6e6;
+    font-size:var(--font-default);
+}
+.alert , .alert p , .alert button{
+    font-size:var(--font-default);
+}
+
+.alert  {
+    padding:1.5rem;
+
+}
+.alert h4 {
+    font-size:1.8rem;
+}
+
+.alert button{
+    margin-right: 5px;
+}
+
+.btn-success {
+    background-color: #66d203 !important;
+    border: 1px solid #66d203 !important;
+}
+.btn-info {
+    background-color: #00a4fe !important;
+    color: #fff !important;
+    border: 1px solid #00a4fe !important;
+}
+
+.alert-close-btn , .btn-close{
+    float: right;
+    font-size:1rem !important;
+    
+
+}

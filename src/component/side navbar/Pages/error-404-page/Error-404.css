@@ -1,0 +1,15 @@
+.error-page h1{
+	font-size:9.8rem;
+	font-weight: 800;
+    line-height: 15rem;
+    text-shadow: rgb(61 61 61 / 30%) 1px 1px, rgb(61 61 61 / 20%) 2px 2px, rgb(61 61 61 / 30%) 3px 3px;
+}
+
+.error-page h2{
+	font-size:3rem;
+	line-height: 3.5rem;
+}
+
+.error-page button{
+	font-size:var(--font-default);
+}

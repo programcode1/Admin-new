@@ -1,0 +1,148 @@
+.checkbox-primary:checked  {
+  background-color: #04a2b3 !important;
+  border-color: #04a2b3 !important;
+
+}
+
+.checkbox-success:checked  {
+  background-color: #66d203 !important;
+  border-color: #66d203 !important;
+  
+
+}
+
+.checkbox-info:checked  {
+  background-color: #00a4fe !important;
+  border-color: #00a4fe !important;
+
+}
+
+.checkbox-warning:checked  {
+  background-color: #ffb600 !important;
+  border-color: #ffb600 !important;
+
+}
+
+.checkbox-danger:checked  {
+  background-color: #e66060 !important;
+  border-color: #e66060 !important;
+
+}
+
+.Circled-checkbox .form-check-input[type=checkbox] {
+    border-radius:5rem ;
+}
+
+.radio {
+    padding-left: 2rem;
+}
+
+ input[type='radio']:after {
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 1.7rem;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #fff;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+input[type='radio']:checked:after {
+        width: 1.7rem;
+        height: 1.7rem;
+        border-radius: 1.7rem;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 3px solid white;
+}
+
+.big-small input[type='radio']:checked:after{
+    background-color: #555555;
+}
+
+.next-one input[type='radio']:checked:after{
+    background-color: #e66060;
+}
+
+.radio-success input[type='radio']:checked:after{
+  background-color:#66d203 ;
+}
+
+.radio-info input[type='radio']:checked:after{
+  background-color:#00a4fe  ;
+}
+
+
+
+
+
+.inline-checkbox{
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content:space-around;
+}
+
+
+.Generalform , .Generalform h5{
+  font-size:var(--font-default);
+}
+.Generalform h4 , h5{
+  color: #fff;
+}
+
+/*form */
+
+.form-check-input{
+  font-size: 1.7rem;
+}
+.form-input label{
+  font-weight:700;
+}
+.form-input .form-control{
+  background-color:#2a323c;
+  border-radius:2px;
+  color: #fff;
+  border:1px solid rgba(255,255,255,0.3);
+  font-size:var(--font-default);
+}
+
+.form-input input::placeholder{
+  color: #9fa2a7 !important;
+}
+
+.form-input input.form-control{
+  height:3.8rem;
+}
+
+.form-input .form-control:focus {
+  background: #2a323c;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+
+
+.help-block small{
+  color: #737373;
+  font-size:85%;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #394451;
+    opacity: 1;
+}
+.form-control[disabled]{
+  cursor: not-allowed;
+}
+
+.font-w{
+  font-weight:normal !important;
+  margin-right:1rem;
+}

@@ -1,0 +1,31 @@
+th {
+	font-size:1.5rem;
+	color:#fff;
+	padding:1rem;
+}
+
+td{
+	font-size:var(--font-default);
+	color: #9FA2A7;
+}
+
+table small{
+	font-size:1.3rem;
+}
+
+.table-bordered{
+	border: 1px solid rgba(159, 162, 167, 0.25);
+}
+
+thead{
+	border-bottom: 2px solid rgba(159, 162, 167, 0.25);
+}
+
+.table-active{
+	background-color: #2a323c;
+    color: #66d203;
+}
+
+.table>tbody + tbody {
+    border-top: 2px solid #ddd;
+}

@@ -1,0 +1,16 @@
+
+.small-text{
+	font-size: var(--font-default);
+}
+
+code {
+    padding: 2px 3px;
+    font-size: 90%;
+    color: #c7254e;
+    margin-left: 4px;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+.btn-link{
+	color: #2a323c;
+}

@@ -1,0 +1,37 @@
+.editable input:focus{
+	outline:none;
+	background:#fff;
+}
+
+.editable input::placeholder , .editable input{
+	color: #9FA2A7 !important;
+}
+
+.editable input{
+	background:none;
+	border-image: none;
+	border:none;
+}
+
+.editable input{
+	padding:7px 5.2rem 7px 8px;
+}
+
+.input-width{
+	padding-right:15rem !important;
+
+}
+tfoot tr td{
+	padding:1rem;
+}
+
+.editable tbody tr , .editable tfoot tr{
+	    border-top: 1px solid rgba(159, 162, 167, 0.25);
+
+}
+
+tfoot tr td{
+	color: #fff;
+	font-size:1.5rem;
+	font-weight: bold;
+}

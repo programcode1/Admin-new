@@ -1,0 +1,62 @@
+.login-page{
+	width: 42rem;
+	margin-top: 7%;
+	padding: 2.5rem 2.5rem 1rem;
+}
+
+.login-page .form-control{
+  background-color:#2a323c;
+  border-radius:2px;
+  color: #fff;
+  border:1px solid rgba(255,255,255,0.3);
+  font-size:var(--font-default);
+}
+
+.login-page input::placeholder{
+  color: #9fa2a7 !important;
+}
+
+.login-page input.form-control{
+  height:3.8rem;
+
+}
+
+.login-page .form-control:focus {
+  background: #2a323c;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+
+
+.whitelogo{
+	width: 35%;
+	height: 35%;
+}
+
+.login-page h3{
+	font-size: 1.8rem;
+}
+.login-page p , .login-page label{
+	font-size:var(--font-default);
+}
+.login-page a{
+  color: #337ab7;
+}
+.login-page a:hover{
+    color: #23527c;
+}
+
+
+/*avtar img (lock-screen)*/
+.user-thumb img{
+  height:8.8rem;
+  width:8.8rem;
+}
+.img-circle{
+  border-radius:50%;
+}
+
+.img-thumbnail{
+  display: inline-block;
+  padding:4px;
+}

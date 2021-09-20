@@ -1,0 +1,46 @@
+
+.panel h3{
+	padding: 1.5rem;
+	padding-left: 2rem;
+	font-weight: bolder;
+	font-size:1.5rem;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px
+}
+.panel p , .panel-fill p{
+	font-size: var(--font-default);
+	padding: .8rem 2rem 2.5rem 2rem;
+	
+}
+.panel ,.panel-fill{
+	padding:0px;
+	margin-bottom: 2.2rem;
+}
+
+ .panel-fill h3{
+ 	padding: 1.5rem;
+	font-weight:800;
+	padding-left: 2rem;
+	font-size:1.6rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+ }
+
+ .panel-fill p{
+ 	color: rgba(255, 255, 255, 0.85);
+ }
+
+ .panel-fill {
+    border-radius: 3px;
+}
+
+.panel-fill-heading{
+	
+    padding-bottom: .9rem;
+    margin: 4rem 0 2rem;
+    border-bottom: 1px solid #eee;
+
+}
+.panel-row .col-md-4{
+	padding-right:1rem;
+	padding-left: 1rem;
+}

@@ -1,0 +1,24 @@
+.hover-table tbody tr , .res-table tbody tr , .Striped-table tbody tr{
+	border-top:1px solid rgba(159, 162, 167, 0.25);
+}
+
+.table_active{
+	background-color: #f5f5f5 !important;
+}
+
+.success{
+	background-color: #DFF0D8 !important;
+}
+.danger{
+	    background-color: #f2dede !important;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #3f4b5a;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #394451;
+}
+.col-md-6{
+	padding: 1rem;
+}
