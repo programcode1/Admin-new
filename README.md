@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-[demo](https://adminpanel-react.vercel.app/)  
+
+<a href="https://adminpanel-react.vercel.app/" target="_blank">demo</a>
 <!-- [demo1](https://react-adminpanel.netlify.app/)-->
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
