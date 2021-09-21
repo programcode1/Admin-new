@@ -88,6 +88,7 @@ a:link , a:visited{
     letter-spacing: .035em;
     pointer-events: none;
     cursor: default;
+	
     font-size: 1.3rem;
     color: #9fa2a7;
 }
@@ -112,6 +113,7 @@ a:link , a:visited{
 	cursor: pointer;
 	align-items: center;
 	padding: 1.5rem;
+	color: #2A323C;
 	position: relative;
 	transition:all .2s ease-out;
 }
