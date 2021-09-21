@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
 
 
@@ -44,25 +43,21 @@ ul{
 .links-menu-scorll:hover::-webkit-scrollbar-thumb{
 	background-color:rgba(169,169,169,0.7);
 }
-ul li{
-	padding:1.5rem;
 
-}
 
 a:link , a:visited{
 	text-decoration: none;
 	color: #2A323C;
 	font-size:var(--font-default);
-	font-family: 'PT Sans Caption', sans-serif;
-}
-
-.active{
-	background-color: var(--color-primary) !important;
 	
 }
-.active a{
-	color:#fff !important;
+
+.active .link-list{
+	background-color: var(--color-primary) !important;
+	color: #fff;
+	
 }
+
 
 
 
@@ -75,7 +70,7 @@ a:link , a:visited{
 /**logo img **/
 .logo{
 	width: 24rem;
-	height:9rem;
+	height:7.5rem;
 	padding:2rem;
 	display: inline-block;
 	background-color: #fff;
@@ -100,48 +95,36 @@ a:link , a:visited{
 
 /**menu element **/
 
-.link-list a{
-	display: block;
-}
-.link-name span{
-	display:inline-block;
-	min-width:5.8rem;
-	text-align: center;
-}
+
 
 .links-menu-scorll ul li{
 	width: 100%;
+	overflow-x: hidden;
 }
 
 
-/**menus title**/
 
-
-.menu-title {
-    padding: 12px 25px !important;
-    letter-spacing: .035em;
-    pointer-events: none;
-    cursor: default;
-    font-size: 13px;
-    color: #9fa2a7;
-}
 
 
 /**menu element **/
 .link-list{
 	display: flex;
-	padding-left: 12px;
+	cursor: pointer;
 	align-items: center;
-	justify-content: space-between;
-	transition:all .2s ease-in;
+	padding: 1.5rem;
+	position: relative;
+	transition:all .2s ease-out;
 }
 
 .link-list .badge{
+		position: absolute;
+		right: 2.5rem;
 		background-color: var(--color-primary);
 		border-radius: .9rem;
 		text-align: center;
-		padding: 3px 7px;
-    	font-size: 11px;
+		padding: 3px .7rem;
+    	font-size: 1.1rem;
+    	color: #fff;
     	text-transform: uppercase;
 		vertical-align:center;
 		
@@ -149,33 +132,93 @@ a:link , a:visited{
 .active .badge{
 	background-color: #05b9cc;
 }
-.padding-badge{
-	padding-right:14px;
 
-}
-.padding-plus{
-	padding-right:10px;
-	transition:all .2s ease-in;
-}
 
 
 	
-.link-name span{
-	padding-left: 10px;
-	vertical-align: middle;
-	transition:all .2s ease-in;
+.link-list span{
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	transition:all .2s ease-out;
+	
 	
 }
+
+
+
 
 /**sub menu **/
 .submenu-list li{
-	padding: 10px;
-	margin-left:30px;
-	padding-left: 25px;
-	transition:all .2s ease-in;
+	padding: 1rem;
+	margin-left: 2.5rem;
+	opacity: 0;
+	transition:opacity .2s ease-out;
+	
 }
 
-.submenu-list{
-	/*display: none;*/
-	transition:all .2s ease-in;
+.submenu-list.hide{
+	height: 0px;
+	overflow: hidden;
+	transition: height .2s ease-out;
+}
+
+.content-hide:after{
+	content:'+';
+	position:absolute;
+	right: 3rem;
+	color: black;
+}
+
+.active > .content-hide:after{
+	content:'-';
+	position:absolute;
+	right: 3rem;
+	color: white;
+}
+
+
+.content-show:after{
+	content:'-';
+	position:absolute;
+	font-size:1.4rem;
+	right: 3rem;
+	color: black;
+}
+
+.active > .content-show:after{
+	content:'-';
+	position:absolute;
+	font-size:1.4rem;
+	right: 3rem;
+	color: white;
+}
+
+.submenu-list.show{
+	height: auto;
+	overflow: visible;
+}
+
+.submenu-list.show li{
+	opacity: 1;
+}
+
+
+
+@media screen and (max-width:768px){
+	.left-side{
+		z-index:500;
+		margin-top:4.5rem;
+		display:none;
+	
+	}
+	.visible.left-side{
+		display:block;
+	}
+
+	.right-side{
+		width: 100%;
+	}
+
+	
 }

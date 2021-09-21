@@ -7,7 +7,7 @@ import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 
 //compoents
 
-import Navbartop from './component/top-navbar'
+import Sidemenu from './component/side navbar/sidemenu'
 import {BrowserRouter , Route , Switch} from 'react-router-dom'
 
 //dashboard
@@ -95,7 +95,7 @@ function App() {
 
                     <div>
                       
-                      <Navbartop/>
+                      <Sidemenu/>
                     
 
                       <div className='right-side'>

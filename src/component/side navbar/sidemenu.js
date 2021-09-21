@@ -1,14 +1,16 @@
 import React ,{useState} from 'react'
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
-
-// //fontaswome
+import '../top-navbar.css'
+//fontaswome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faGem } from '@fortawesome/free-regular-svg-icons';
 
 
 import './sidemenu.css'
-import {Home ,Album ,Layers,TableChart ,PieChart,Opacity ,Add,Map,Event,Pages,Share,Assistant,Remove} from '@material-ui/icons/';
-import {Badge} from '@material-ui/core';
+import {Home ,Album ,Layers,TableChart ,PieChart,Opacity ,Add,Map,Event,Pages,Share,
+    Assistant,Remove,
+Notifications ,Menu , Fullscreen} from '@material-ui/icons/';
+import {Avatar ,Badge} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import logo from '../../img/logo.png';
 
@@ -16,66 +18,56 @@ import logo from '../../img/logo.png';
 
 function Sidemenu(){
 
-    
-    //toggle1 
-    const [toggle,settoggle]=useState(false)
-    //toggle2
-    const [toggle2,settoggle2]=useState(false)
-   //toggle3
-    const [toggle3,settoggle3]=useState(false)
-    //toggle4
-    const [toggle4,settoggle4]=useState(false)
-    //toggle5
-    const [toggle5,settoggle5]=useState(false)
-    //toggle6
-    const [toggle6,settoggle6]=useState(false)
-    //toggle7
-    const [toggle7,settoggle7]=useState(false)
-    //toggle8
-    const [toggle8,settoggle8]=useState(false)
-    //toggle9
-    const [toggle9,settoggle9]=useState(false)
-    //toggle10
-    const [toggle10,settoggle10]=useState(false)
+    //show submenu on small screen 
+    const[toggle,settoggle] = useState(false)
 
-    const[Badge1 , setBadge1] = useState(false)
-    const[Badge2 , setBadge2] = useState(false)
-    const[Badge3 , setBadge3] = useState(false)
-   
+    //links all
+    let isactive = window.location.pathname
+    const[dashboard , setdashboard_path] = useState('/')
+    const[UI_ELements ,UI_ELements_getpath] = useState('')
+    const[forms,forms_getpath] = useState('')
+    const[typo , typo_getpath] = useState('')
+    const[table , table_getpath] = useState('')
+    const[charts , charts_getpath] = useState('')
+    const[icons , icons_getpath] = useState('')
+    const[maps , maps_getpath] = useState('')
+    const[calendar , calendar_getpath] = useState('')
+    const[layout , layout_getpath] = useState('')
+    const[pages , pages_getpath] = useState('')
+
+
+    //show to submenu
+    const[obj , setobj] = useState({
+            'id1':false,
+            'id2':false,
+            'id3':false ,
+            'id4':false,
+            'id5':false,
+            'id6':false,
+            'id7':false,
+            'id8':false,
+            'id9':false,
+    })
+    
     return (
        
           
             
             
-                
-                <div className='left-side'>
+            <div>    
+                <div className={toggle?'visible left-side':'left-side'}>
                     <div className ='links-menu-scorll'>
                    
                             <ul>
                                 {/* menu compnent */}
                                 <li className='menu-title'>Menu</li>
                                 
-                                <li className={Badge1 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle(false);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(!Badge1)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
+                                <li className={dashboard == isactive ? 'active':''}>
                                     <Link to='/'>                                 
-                                        <div className='link-list padding-badge'>
-                                            <a href=''className='link-name'>
-                                                <Home style={{ fontSize:19}}/>
-                                                <span>Dashboard</span>
-                                                
-                                            </a>
-                                           <span className='badge'>1</span>
+                                        <div className='link-list ' onClick={()=>setdashboard_path("/")}>
+                                            <span><Home style={{ fontSize:19}}/></span>
+                                            <span>Dashboard</span>
+                                            <span className='badge'>1</span>
                                         </div>
                                     </Link>
 
@@ -83,479 +75,483 @@ function Sidemenu(){
 
                                 
 
+                                {/* UI elements*/}
+                                <li className={UI_ELements == isactive ? 'active':''} 
+                                    onClick = {()=>setobj({
+                                        "id1":!(obj.id1), 
+                                        "id2":false,
+                                        'id3':false ,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                <li className={toggle ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle(!toggle);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
+                                    })}
+                                    >
                                 
-                                    <div className=' link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <Album style={{ fontSize:19}}/>
-                                            <span>UI ELements</span>
-                                            
-                                        </a>
-                                        {
-                                            (()=> {
-                                                if (!toggle){
-                                                    
-                                                   
-                                                    return <Add style={{ fontSize:16}}/>
-                                                    
-                                                }else{
-                                                    
-                                                     return  <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            
-
-                                            })()
-                                        }
-                                        
-                                      
+                                    <div className={obj.id1 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Album style={{ fontSize:19}}/></span>
+                                        <span>UI ELements</span>
+                                     
                                     </div>
+                                     {/*submenu UI*/}
+                                    <ul className={obj.id1 ? 'submenu-list show':'submenu-list hide'}>
+                                            <Link to='/ui-componets'>
+                                                <li onClick={()=>{UI_ELements_getpath('/ui-componets');settoggle(false)}}>Components</li>
+                                            </Link>
+                                            <Link to='/ui-buttons'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-buttons')}>Buttons</li>
+                                            </Link>
+                                            <Link to='/ui-panels'>
+                                                 <li onClick={()=>UI_ELements_getpath('/ui-panels')}>panels</li>
+                                            </Link>
+                                            <Link to='/ui-tabs&accordions'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-tabs&accordions')}>Tabs & Accordions</li>
+                                            </Link>
+                                            <Link to='/ui-modals'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-modals')}>Modals</li>
+                                            </Link>
+                                            <Link to='/ui-progressbar'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-progressbar')}>Progress Bars</li>
+                                            </Link>
+                                            <Link to='/ui-alerts'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-alerts')}>Alerts</li>
+                                            </Link>
+                                            <Link to='/ui-sweet-alert'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-sweet-alert')}>Sweet-Alert</li>
+                                            </Link>
+                                            <Link to='/ui-grid'>
+                                                <li onClick={()=>UI_ELements_getpath('/ui-grid')}>Grid</li>
+                                            </Link>
+                                                
+                                    </ul>
                                     
                                 </li>
 
-                                {/*submenu UI*/}
-                                {
-                                    toggle?  <ul class='submenu-list'>
-                                        <Link to='/ui-componets'><li>Components</li></Link>
-                                        <Link to='/ui-buttons'><li>Buttons</li></Link>
-                                        <Link to='/ui-panels'><li>panels</li></Link>
-                                        <Link to='/ui-tabs&accordions'><li>Tabs & Accordions</li></Link>
-                                        <Link to='/ui-modals'><li>Modals</li></Link>
-                                        <Link to='/ui-progressbar'><li>Progress Bars</li></Link>
-                                        <Link to='/ui-alerts'><li>Alerts</li></Link>
-                                        <Link to='/ui-sweet-alert'><li>Sweet-Alert</li></Link>
-                                        <Link to='/ui-grid'><li>Grid</li></Link>
-                                        
-                                </ul>:null
-                                }
+                               
+                               
                                 
+                                {/* forms elements*/}
+                                <li className={forms == isactive ? 'active':''}
+                                    onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":!(obj.id2),
+                                        'id3':false ,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                <li className={toggle2 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle2(!toggle2);
-                                                                    settoggle(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className=' link-list padding-plus'>
-                                        <a href=''  className='link-name'>
-                                            <Layers style={{ fontSize:19}}/>
-                                            <span>Forms</span>
-                                            
-                                        </a>
-                                         {
-                                            (()=>{
-                                                if (!toggle2){
-                                                    
-                                                    return <Add style={{ fontSize:16}}/>
-                                                    
-                                                }else{
-                                                    
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
+                                    })}
+                                    >
+                                                                    
+                                    <div className={obj.id2 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Layers style={{ fontSize:19}}/></span>
+                                        <span>Forms</span>
                                     </div>
+                                     <ul className={obj.id2 ? 'submenu-list show':'submenu-list hide'}>
+                                         <Link to='/forms-element'>
+                                            <li onClick={()=>forms_getpath('/forms-element')}>General Elements</li>
+                                        </Link>
+                                         <Link to='/forms-validation'>
+                                            <li onClick={()=>forms_getpath('/forms-validation')}>Form Validation</li>
+                                        </Link>
+                                        <Link to='/forms-advance'> 
+                                            <li onClick={()=>forms_getpath('/forms-advance')}>Advanced Form</li>
+                                        </Link>
+                                        <Link to='/forms-wysiwyg'>
+                                            <li onClick={()=>forms_getpath('/forms-wysiwyg')}>WYSIWYG Editor</li>
+                                        </Link>
+                                        <Link to='/forms-uploads'>
+                                            <li onClick={()=>forms_getpath('/forms-uploads')}>Multiple File Upload</li>
+                                        </Link>
+                                    </ul>
                                 </li>
 
-                                 {/*submenu Forms*/}
-                                  {
-                                    toggle2?  <ul class='submenu-list'>
-                                     <Link to='/forms-element'><li>General Elements</li></Link>
-                                     <Link to='/forms-validation'><li>Form Validation</li></Link>
-                                     <Link to='/forms-advance'> <li>Advanced Form</li></Link>
-                                     <Link to='/forms-wysiwyg'><li>WYSIWYG Editor</li></Link>
-                                     <Link to='/forms-uploads'><li>Multiple File Upload</li></Link>
-                                    
-                                   
-                                    
-                                        
-                                        
-                                    </ul>:null
+                                 
+                                
+                                {/*typography*/}
+                                <li className={typo == isactive ? 'active':''} 
+                                    onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false ,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                }
-                                
-                                
-                                <li className={Badge2 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle3(false)
-                                                                    settoggle2(false);
-                                                                    settoggle(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(false)
-                                                                    setBadge2(!Badge2)
-                                                                    setBadge3(false)}}>
+                                    })}
+                                    >
                                     <Link to='/typography'>
-                                        <div className=' link-list padding-badge'>
-                                            
-                                            <a href='' className='link-name'>
-                                                        <FontAwesomeIcon icon={faGem} />
-                                                        <span>Typography</span>
-                                            </a> 
-                                             <span className='badge'>4</span>
+                                        <div className='link-list' onClick={()=>typo_getpath('/typography')}>
+                                            <span><FontAwesomeIcon icon={faGem} /></span>
+                                            <span>Typography</span>
+                                            <span className='badge'>4</span>
                                         </div>
                                      </Link>
                                 </li>
-                                
-                                <li className={toggle3 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle3(!toggle3)
-                                                                    settoggle2(false);
-                                                                    settoggle(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className='link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <TableChart style={{ fontSize:19}}/>
-                                            <span>Tables</span>
-                                            
-                                        </a>
-                                         {
-                                            (()=>{
-                                                if (!toggle3){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                   
-                                                    
-                                                }else{
-                                                     return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
+
+                                {/*table elements*/}
+                                <li className={table == isactive ? 'active':''} 
+                                    onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':!(obj.id3),
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
+
+                                    })}
+                                    >
+                                    <div className={obj.id3 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><TableChart style={{ fontSize:19}}/></span>
+                                        <span>Tables</span>
+
                                     </div>
-                                    
+                                     {/*sub menu table */}
+                                    <ul className={obj.id3 ? 'submenu-list show':'submenu-list hide'}>
+                                        <Link to='/tables-basic'>
+                                            <li onClick={()=>table_getpath('/tables-basic')}>
+                                                Basic Tables
+                                            </li>
+                                        </Link>
+                                        <Link to='/tables-data'>
+                                            <li onClick={()=>table_getpath('/tables-data')}>
+                                                Data Tables
+                                            </li>
+                                        </Link>
+                                        <Link to='/tables-responsive'>
+                                            <li onClick={()=>table_getpath('/tables-responsive')}>
+                                                Responsive Table
+                                            </li>
+                                        </Link>
+                                        <Link to='/tables-editable'>
+                                            <li onClick={()=>table_getpath('/tables-editable')}>
+                                                Editable table
+                                            </li>
+                                        </Link>
+                                    </ul>
                                 </li>
-                                {/*sub menu table */}
-                                  {
-                                    toggle3?   <ul class='submenu-list'>
-                                        <Link to='/tables-basic'><li>Basic Tables</li></Link>
-                                        <Link to='/tables-data'><li>Data Tables</li></Link>
-                                        <Link to='/tables-responsive'><li>Responsive Table</li></Link>
-                                        <Link to='/tables-editable'><li>Editable Table</li></Link>
-                                        
-                                        
-                                        
-
-
-                                </ul>:null
-
-                                }
                                
-                                <li className={toggle4 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle4(!toggle4);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                    setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className='link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <PieChart style={{ fontSize:19}}/>
-                                            <span>Charts</span>
-                                        </a>
-                                         {
-                                            (()=>{
-                                                if (!toggle4){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                }else{
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
-                                       
-                                    </div>    
+                               
+                                {/*charts element */}
+                                <li className={charts == isactive ? 'active':''} 
+                                      onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':!(obj.id4),
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
+
+                                    })}
+                                    >
+                                    <div className={obj.id4 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><PieChart style={{ fontSize:19}}/></span>
+                                        <span>Charts</span>
+                                    </div> 
+
+                                    {/*submenu list */}
+                                    <ul className={obj.id4 ? 'submenu-list show':'submenu-list hide'}>
+                                        <Link to='charts-morris'>
+                                            <li onClick={()=>charts_getpath('/charts-morris')}>Morris Chart</li>
+                                        </Link>
+                                        <Link to='charts-chartjs'>
+                                            <li onClick={()=>charts_getpath('/charts-chartjs')}>Chartjs</li>
+                                        </Link>
+                                        <Link to='charts-float'>
+                                            <li onClick={()=>charts_getpath('/charts-float')}>Flot Chart</li>
+                                        </Link>
+                                        <Link to='charts-others'>
+                                            <li onClick={()=>charts_getpath('/charts-others')}>Other Chart</li>
+                                        </Link>
+                                    </ul>
+
+                                   
                                 </li>
-                                {
-                                    toggle4? <ul class='submenu-list'>
-                                    // <Link to='charts-morris'><li>Morris Chart</li></Link>
-                                    <Link to='charts-chartjs'><li>Chartjs</li></Link>
-                                    // <Link to='charts-float'><li>Flot Chart</li></Link>
-                                    <Link to='charts-others'><li>Other Chart</li></Link>
-                                    </ul>:null
-
-                                }
+                               
                                
 
+                                {/*icons elements */}
+                                <li className={icons == isactive ? 'active':''} 
+                                         onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':!(obj.id5),
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                
+                                    })}
+                                >
+                                    <div className={obj.id5 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Opacity style={{ fontSize:19}}/></span>
+                                        <span>Icons</span>
+                                    </div>
+                                    {/*submenu list */}
+                                    <ul className={obj.id5 ? 'submenu-list show':'submenu-list hide'}>
+                                        <Link to='/icons-matrial'>
+                                            <li onClick={()=>icons_getpath('/icons-matrial')}>Material Design</li>
+                                        </Link>
+                                        <Link to='/icons-ion'>
+                                            <li onClick={()=>icons_getpath('/icons-ion')}>Ion Icons</li>
+                                        </Link>
+                                        <Link to='/icons-fontawesome'>
+                                            <li onClick={()=>icons_getpath('/icons-fontawesome')}>Font awesome</li>
+                                        </Link>
+                                        <Link to='/icons-themify'>
+                                            <li onClick={()=>icons_getpath('/icons-themify')}>Themify Icons</li>
+                                        </Link>
+                                    </ul>
+
+                             
+                                </li>
+                               
                                
                                
 
                             
+                        
+
                                 {/* features compnent */}
                                 <li className='menu-title'>Features</li>
                                 
-                                <li className={toggle6 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle6(!toggle6);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className='link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <Map style={{ fontSize:19}}/>
-                                            <span>Maps</span>
-                                        </a>
-                                        {
-                                            (()=>{
-                                                if (!toggle6){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                }else{
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
-                                    </div>
-                                    
-                                </li>
-                                {/*map sub menu*/}
-                                 {
-                                    toggle6? <ul class='submenu-list'>
-                                    <Link to='/maps-google'><li>Google Map</li></Link>
-                                    <Link to='/maps-vector'><li>Vector Map</li></Link>
-                                            
-                                </ul>:null
+                                
+                                {/*Maps elements*/}
+                                <li className={maps == isactive ? 'active':''} 
+                                     onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':!(obj.id6),
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                }
+                                    })}
+                                    >
+                                    <div className={obj.id6 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Map style={{ fontSize:19}}/></span>
+                                        <span>Maps</span>
+                                    </div>
+                                     {/*map sub menu*/}
+                                    <ul className={obj.id6 ? 'submenu-list show':'submenu-list hide'}>
+                                        <Link to='/maps-google'>
+                                            <li onClick={()=>maps_getpath('/maps-google')}>Google Map</li>
+                                        </Link>
+                                        <Link to='/maps-vector'>
+                                            <li onClick={()=>maps_getpath('/maps-vector')}>Vector Map</li>
+                                        </Link>
+                                                
+                                    </ul>
+                                </li>
+                               
                                
                                 
+                                {/*calendar*/}
+                                <li className={calendar == isactive ? 'active':''} 
+                                        onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':false
 
-                                <li className={Badge3 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle7(false);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(!Badge3)}}>
+                                    })}
+
+                                    >
                                     <Link to='/calendar'>
-                                        <div className='link-list padding-plus'>
-                                            <a href='' className='link-name'>
-                                                <Event style={{ fontSize:19}}/>
-                                                <span>Calendar</span>
-                                            </a>
-                                             <span className='badge'>new</span>
-                                       
+                                        <div className='link-list ' onClick={()=>calendar_getpath('/calendar')}>
+                                            <span><Event style={{ fontSize:19}}/></span>
+                                            <span>Calendar</span>
+                                            <span className='badge'>New</span>
                                         </div>
                                     </Link>
                                     
                                 </li>
-                                <li className={toggle7 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle7(!toggle7);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
 
-                                    <div className='link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <Assistant style={{ fontSize:19}}/>
-                                            <span>Layout</span>
-                                        </a>
-                                        {
-                                            (()=>{
-                                                if (!toggle7){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                }else{
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
+                                {/*layout */}
+                                <li className={layout == isactive ? 'active':''}
+                                        onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':!(obj.id7),
+                                        'id8':false,
+                                        'id9':false
+
+                                    })}
+
+                                    >
+                                    <div className={obj.id7 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Assistant style={{ fontSize:19}}/></span>
+                                        <span>Layout</span>
                                     </div>
-                                </li>
-                                {/*layout sub menu*/}
-                                {
-                                    toggle7?  <ul class='submenu-list'>
+                                     {/*layout sub menu*/}
+                                    <ul className={obj.id7 ? 'submenu-list show':'submenu-list hide'}>
                                         <li>Menu Collapse</li>
                                         <li>Menu Small</li>
                                         <li>Menu Style 2</li>
-                                            
-                                </ul>:null
-
-                                }
-                              
-                                <li className={toggle8 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle8(!toggle8);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle(false)
-                                                                    settoggle9(false)
-                                                                    settoggle10(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className='link-list padding-plus'>
-                                        <a href='' className='link-name'>
-                                            <Pages style={{ fontSize:19}}/>
-                                            <span>Pages</span>
-                                        </a>
-                                        {
-                                            (()=>{
-                                                if (!toggle8){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                }else{
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
-                                    </div>
-                                    
+                                    </ul>
                                 </li>
-                                {/*sub menu of pages*/}
-                                 {
-                                    toggle8?  <ul class='submenu-list'>
-                                            <Link to='login-page'><li>Login</li></Link>
-                                            <Link to='register-page'><li>Register</li></Link>
-                                            <Link to='recover-password-page'><li>Recover Password</li></Link>
-                                            <Link to='lock-screen-page'><li>Lock Screen</li></Link>
-                                            <Link to='blank-page'><li>Blank Page</li></Link>
-                                            <Link to='404-page'><li>Error 404</li></Link>
-                                            <Link to='500-page'><li>Error 500</li></Link>
-                                            <Link to='timeline-page'><li>Timeline</li></Link>
-                                            <Link to='invoice-page'><li>Invoice</li></Link>
-                                            <Link to='directory-page'><li>Directory</li></Link>
-                                </ul>:null
-
-                                }
-                               
-                                <li className={toggle9 ? 'active':''} onClick={(e)=>{e.preventDefault();settoggle9(!toggle9);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle(false)
-                                                                    settoggle10(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                    <div className='link-list padding-plus'>
-                                            <a href='' className='link-name'>
-                                                <Share style={{ fontSize:19}}/>
-                                                <span>Multi Menu</span>
-                                            </a>
-                                             {
-                                            (()=>{
-                                                if (!toggle9){
-                                                    return <Add style={{ fontSize:16}}/>
-                                                }else{
-                                                    return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                }
-                                            })()
-                                        }
-                                    </div>
-                                </li>
-                                {/* sub menu share */}
-                                {
-                                    toggle9?  <ul class='submenu-list'>
-                                    <li onClick={(e)=>{e.preventDefault();settoggle10(!toggle10);
-                                                                    settoggle2(false);
-                                                                    settoggle3(false)
-                                                                    settoggle4(false);
-                                                                    settoggle5(false)
-                                                                    settoggle6(false);
-                                                                    settoggle7(false)
-                                                                    settoggle8(false)
-                                                                    settoggle9(false)
-                                                                    settoggle(false)
-                                                                     setBadge1(false)
-                                                                    setBadge2(false)
-                                                                    setBadge3(false)}}>
-                                                
-                                        <div className=' link-list p-0 padding-plus'>
-                                            <a href='' className='link-name'>
-                                                    <span className='p-0'>Menu Item 1.1</span>
-                                            </a>
-                                                {
-                                                    (()=>{
-                                                        if (!toggle10){
-                                                            return <Add style={{ fontSize:16}}/>
-                                                        }else{
-                                                            return    <Remove style={{ fontSize:16 , color:'white'}}/>
-                                                        }
-                                                    })()
-                                                }
-                                        </div>
-                                        {/*Menu Item 1.1 sub menu*/}
-                                         {
-                                                toggle10?  <ul class='submenu-list'>
-                                                    <li>Menu Item 2.1</li>
-                                                    <li>Menu Item 2.2</li>
-                                                </ul>:null
-
-                                        }
-                                                   
-                                    </li>
-                                        
-                                       
-                                    <li>Menu Item 1.2</li>
-
-                                </ul>:null
-
-                                }
                                
                                 
+                                {/*pages element */}
+                                <li className={pages == isactive ? 'active':''}
+                                        onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':!(obj.id8),
+                                        'id9':false
+
+                                    })}
+                                    >
+                                    <div className={obj.id8 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Pages style={{ fontSize:19}}/></span>
+                                        <span>Pages</span>
+                                    </div>
+                                    {/*sub menu of pages*/}
+                                    <ul className={obj.id8 ? 'submenu-list show':'submenu-list hide'}>
+                                            <Link to='login-page'>
+                                                <li onClick={()=>pages_getpath('/login-page')}>Login</li>
+                                            </Link>
+                                            <Link to='register-page'>
+                                                <li onClick={()=>pages_getpath('/register-page')}>Register</li>
+                                            </Link>
+                                            <Link to='recover-password-page'>
+                                                <li onClick={()=>pages_getpath('/recover-password-page')}>Recover Password</li>
+                                            </Link>
+                                            <Link to='lock-screen-page'>
+                                                <li onClick={()=>pages_getpath('/lock-screen-page')}>Lock Screen</li>
+                                            </Link>
+                                            <Link to='blank-page'>
+                                                <li onClick={()=>pages_getpath('/blank-page')}>Blank Page</li>
+                                            </Link>
+                                            <Link to='404-page'>
+                                                <li onClick={()=>pages_getpath('/404-page')}>Error 404</li>
+                                            </Link>
+                                            <Link to='500-page'>
+                                                <li onClick={()=>pages_getpath('/500-page')}>Error 500</li>
+                                            </Link>
+                                            <Link to='timeline-page'>
+                                                <li onClick={()=>pages_getpath('/timeline-page')}>Timeline</li>
+                                            </Link>
+                                            <Link to='invoice-page'>
+                                                <li onClick={()=>pages_getpath('/invoice-page')}>Invoice</li>
+                                            </Link>
+                                            <Link to='directory-page'>
+                                                <li onClick={()=>pages_getpath('/directory-page')}>Directory</li>
+                                            </Link>
+                                    </ul>
+                                </li>
+                              
+                                {/*mutli menu*/}
+                                <li className={obj.id9 ? 'active':''} 
+                                      onClick = {()=>setobj({
+                                        "id1":false, 
+                                        "id2":false,
+                                        'id3':false,
+                                        'id4':false,
+                                        'id5':false,
+                                        'id6':false,
+                                        'id7':false,
+                                        'id8':false,
+                                        'id9':!(obj.id9)
+
+                                    })}
+                                    >
+                                    <div className={obj.id9 ? 'link-list content-show':'link-list content-hide'}>
+                                        <span><Share style={{ fontSize:19}}/></span>
+                                        <span>Multi Menu</span>
+                                          
+                                    </div>
+                                    {/* sub menu share */}
+                                    <ul class='submenu-list'>
+                                        <li>
+                                                
+                                            <div className=' link-list p-0 '>
+                                                <span className='p-0'>Menu Item 1.1</span>
+                                            </div>
+                                       
+                                        </li>
+                                        <li>Menu Item 1.2</li>
+
+                                    </ul>
+                                </li>
                             </ul>
                    
                     </div>
                 </div>
+                <div className='d-flex navbar-top'>
+                    <Link to='/'>  
+                           <div className='logo text-center'>
+                                <img src={logo}/>
+
+                            </div>
+                        </Link>
+                    <div className='container-fluid  top-nav'>
+                        <ul className='left'>
+                        
+                            <li className='toggle' onClick={()=>settoggle(!toggle)}>
+                                <Menu/>
+                            </li>
+                            <li>
+                                <input type='text' class="form-control search-bar" placeholder="Search.." />
+                            </li>
+                        </ul>
+                        
+
+                        
+
+                        <ul className='right mr-auto'>
+                                    
+                                <li className='round-circle'>
+                                    <Badge color="secondary" overlap="circular" badgeContent=" " variant="dot">
+                                        <Notifications style={{fontSize:20}}/>
+                                    </Badge>
+                                </li>
+                                <li className='round-circle'>
+
+                                    <Fullscreen style={{fontSize:20}}/>
+                                </li>
+                                <li >
+                                    <Avatar alt="s" src="/static/images/avatar/1.jpg" className='avtar'/>
+                                </li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
                 
       
    

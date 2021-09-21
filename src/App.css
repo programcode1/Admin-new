@@ -18,7 +18,8 @@
 	width: 24rem;
 	position:fixed;
 	left: 0;
-	margin-top:6%;
+	margin-top:4.5%;
+	overflow-x: hidden;
 	height: 100vh;
 	font-size: 1.5rem;
 	
@@ -28,8 +29,15 @@
 	width: calc(100% - 24rem);
 	position: absolute;
 	right: 0;
-	margin-top:5%;
+	margin-top:3.5%;
 	
+
+
+}
+
+ul{
+	list-style: none;
+	padding-left:0 !important; 
 
 
 }
