@@ -123,6 +123,10 @@ a:link , a:visited{
 	align-items: center;
 	padding: 1.5rem;
 	font-size:1.6rem;
+<<<<<<< HEAD
+=======
+	color: #2A323C;
+>>>>>>> caadaa499be8d690f89f49a0b3dd56734dfc497c
 	position: relative;
 	transition:all .2s ease-out;
 }
