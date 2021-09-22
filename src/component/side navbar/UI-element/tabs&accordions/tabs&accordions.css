@@ -137,6 +137,9 @@
     
 
 }
+.nav-tabs .active{
+    background-color: #05b9cc;
+}
 
 .nav-vertical a:link,.nav-tabs a:visited{
     width:12.3rem;

@@ -64,7 +64,7 @@ function Sidemenu(){
                                 
                                 <li className={dashboard == isactive ? 'active':''}>
                                     <Link to='/'>                                 
-                                        <div className='link-list ' onClick={()=>setdashboard_path("/")}>
+                                        <div className='link-list ' onClick={()=>{setdashboard_path("/");settoggle(false)}}>
                                             <span><Home style={{ fontSize:14}}/></span>
                                             <span>Dashboard</span>
                                             <span className='badge'>1</span>
@@ -190,7 +190,7 @@ function Sidemenu(){
                                     })}
                                     >
                                     <Link to='/typography'>
-                                        <div className='link-list' onClick={()=>typo_getpath('/typography')}>
+                                        <div className='link-list' onClick={()=>{typo_getpath('/typography');settoggle(false)}}>
                                             <span><FontAwesomeIcon icon={faGem} /></span>
                                             <span>Typography</span>
                                             <span className='badge'>4</span>
@@ -383,7 +383,7 @@ function Sidemenu(){
 
                                     >
                                     <Link to='/calendar'>
-                                        <div className='link-list ' onClick={()=>calendar_getpath('/calendar')}>
+                                        <div className='link-list ' onClick={()=>{calendar_getpath('/calendar');settoggle(false)}}>
                                             <span><Event style={{ fontSize:14}}/></span>
                                             <span>Calendar</span>
                                             <span className='badge'>New</span>
