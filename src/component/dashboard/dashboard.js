@@ -14,13 +14,13 @@ function Dashboard(){
 			
 			<div className='container'>
 				<h4 className='text-white font-22 py-4'>Dashboard</h4>
-				<div className='row text-center justify-content-center'>
-					<div className='col-md-3'> 
+				<div className='row text-center'>
+					<div className='col-sm-6 col-lg-3'> 
 						<div className='panel text-center bg-color'>
 							<div className='panel-heading'>
-								<h3 className='text-muted font-light medium-font-size'>
+								<h4 className='text-muted'>
 									Total Subscription 
-								</h3> 
+								</h4> 
 							</div>
 							<div className='panel-body'>
 								<h2 className='text-white'> 
@@ -35,12 +35,12 @@ function Dashboard(){
 						</div>
 						
 					</div> 
-					<div className='col-md-3 '> 
+					<div className='col-sm-6 col-lg-3 '> 
 						<div className='panel text-center bg-color'>
-							<div className='panel-heading ' >
-								<h3 className='text-muted font-light medium-font-size'>
+							<div className='panel-heading' >
+								<h4 className='text-muted'>
 									Order Status
-								</h3> 
+								</h4> 
 							</div>
 							<div className='panel-body'>
 								<h2 className='text-white'> 
@@ -54,12 +54,12 @@ function Dashboard(){
 							</div> 
 						</div>
 					</div> 
-					<div className='col-md-3'> 
+					<div className='col-sm-6 col-lg-3'> 
 						<div className='panel text-center bg-color'>
 							<div className='panel-heading'>
-								<h3 className='text-muted font-light medium-font-size'>
+								<h4 className='text-muted'>
 									Unique Visitors
-								</h3> 
+								</h4> 
 							</div>
 							<div className='panel-body'>
 								<h2 className='text-white'> 
@@ -73,12 +73,12 @@ function Dashboard(){
 							</div> 
 						</div>
 					</div> 
-					<div className='col-md-3'> 
+					<div className='col-sm-6 col-lg-3'> 
 						<div className='panel text-center bg-color'>
 							<div className='panel-heading'>
-								<h3 className='text-muted font-light medium-font-size'>
+								<h4 className='text-muted'>
 									Monthly Earnings
-								</h3> 
+								</h4> 
 							</div>
 							<div className='panel-body'>
 								<h2 className='text-white'> 

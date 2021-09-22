@@ -16,9 +16,7 @@
 
 /*panel 4 col section */
 
-.medium-font-size{
-	font-size: 1.6rem !important;
-}
+
 .small-text-size{
 	font-size:0.875em;
 }
@@ -26,19 +24,22 @@
 	color: #fff;
 }
 
-.font-light {
-    font-weight:100 !important;
-}
+
 .panel{
 	
 	padding:1rem;
+	font-family: inherit;
 	margin-bottom:1.5rem;
 
 	
 }
-
 .panel-heading{
-	margin-bottom: 1.5rem;
+	padding:1rem 2rem;
+
+}
+.panel-heading h4{
+	font-weight:400;
+	font-size:1.6rem;
 }
 .panel-body h2{
 	margin-bottom: 1.5rem;

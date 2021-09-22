@@ -59,7 +59,9 @@ a:link , a:visited{
 }
 
 
-
+.link-list:hover , .content-show{
+	background-color:#f2f2f2;
+}
 
 
 
@@ -68,17 +70,25 @@ a:link , a:visited{
 
 
 /**logo img **/
-.logo{
+.logo_img{
 	width: 24rem;
-	height:7.5rem;
-	padding:2rem;
-	display: inline-block;
+	padding:3rem 0rem 2rem;
+	display: block;
 	background-color: #fff;
+	line-height:7rem;
+	height: 7rem;
+	position: relative;
 }
-.logo img{
-	max-height:65%;
-	max-width: 65%;
+.logo{
+	
+	height:2.8rem;
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	
 }
+
 
 /**menus title**/
 
@@ -112,6 +122,7 @@ a:link , a:visited{
 	cursor: pointer;
 	align-items: center;
 	padding: 1.5rem;
+	font-size:1.6rem;
 	position: relative;
 	transition:all .2s ease-out;
 }
@@ -167,6 +178,7 @@ a:link , a:visited{
 	content:'+';
 	position:absolute;
 	right: 3rem;
+	font-size: 1.9rem;
 	color: black;
 }
 
@@ -174,6 +186,7 @@ a:link , a:visited{
 	content:'-';
 	position:absolute;
 	right: 3rem;
+	font-size: 3rem;
 	color: white;
 }
 
@@ -181,7 +194,7 @@ a:link , a:visited{
 .content-show:after{
 	content:'-';
 	position:absolute;
-	font-size:1.4rem;
+	font-size: 3rem;
 	right: 3rem;
 	color: black;
 }
@@ -189,7 +202,7 @@ a:link , a:visited{
 .active > .content-show:after{
 	content:'-';
 	position:absolute;
-	font-size:1.4rem;
+	font-size:3rem;
 	right: 3rem;
 	color: white;
 }
@@ -218,7 +231,16 @@ a:link , a:visited{
 
 	.right-side{
 		width: 100%;
+		margin-top: 10%;
 	}
+
+	.logo_img{
+		width: 7rem;
+	}
+
+	.round-circle{
+		display: none;
+	}	
 
 	
 }

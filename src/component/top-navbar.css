@@ -2,7 +2,9 @@
 	position: fixed;   
 	top:0;
 	z-index: 1000; 
+	height: 7rem;
 	width: 100%;
+	
 	
 }
 
@@ -10,11 +12,14 @@
 .top-nav{
 	display:flex;
 	justify-content: space-between;
-	align-self: flex-start;
+	align-items:center;
 	margin: 0px;
+	height: 7rem;
+	width: 100%;
 	padding: 0px;
 	background-color: #2a323c;
 	color: #ffff;
+
 
 	
 }
@@ -28,15 +33,23 @@ ul{
 .left{
 	display: flex;
 	align-items: center;
+	justify-content: center;
+
 
 }
 .right{
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	margin-right:3rem;
 	
 }
+.right li:not(:last-child){
+	margin-right:1rem;
+}
 input::placeholder{
-	color: #ffffff !important;
+	color: #9fa2a7 !important;
+
 }
 
 input.search-bar:focus{
@@ -63,14 +76,27 @@ input.search-bar {
     margin-top: .6rem;
     margin-left: 1.5rem;
     border-radius: .5rem;
-    padding-left: .2rem;
+    padding:2rem;
 }
 
 .toggle{
-	padding: .5rem;
+	
 	display: none;	
-	margin-left: .7rem;
+	margin-left:2rem;
+	margin-right:-.6rem;
 }
+
+.bar-toogle{
+	transition: color .5s ease-in;
+	color: #9fa2a7;
+	line-height: 1;
+	vertical-align: middle;
+}
+.bar-toogle:hover{
+	color: #fff;
+}
+
+
 
 @media screen and (max-width:768px){
 	.toggle{
@@ -80,11 +106,14 @@ input.search-bar {
 
 
 .round-circle{
-	padding:.5rem;
-	margin: .5rem;
-	border:2px solid #9fa2a7;
-	border-radius:5rem;
+	height: 3.6rem;
+    width: 3.6rem;
+    border:2px solid #9fa2a7;
+	border-radius:50%;
 	font-size: var(--font-default);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .avtar{
 	border:2px solid #9fa2a7;
