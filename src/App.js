@@ -53,7 +53,7 @@ import Directory_page from "./component/side navbar/Pages/directory-page/Directo
 // //Icons component
 // import Mdi_icons from "./component/side navbar/Icons/matrial-design-icons/matrial-design-icon-page";
 // import Ion_icons from "./component/side navbar/Icons/ion-icons/icons-ion";
-import Fontawesome_icons from "./component/side navbar/Icons/font-awesome-icons/icons-fontawesome";
+// import Fontawesome_icons from "./component/side navbar/Icons/font-awesome-icons/icons-fontawesome";
 // import Themify_icons from "./component/side navbar/Icons/themify-icons/icons-themify";
 
 //charts component
@@ -146,11 +146,11 @@ function App() {
                 {/* Icons  */}
                 {/* <Route path="/icons-matrial" component={Mdi_icons} exact />
                 <Route path="/icons-ion" component={Ion_icons} exact /> */}
-                <Route
+                {/* <Route
                   path="/icons-fontawesome"
                   component={Fontawesome_icons}
                   exact
-                />
+                /> */}
                 {/*
                 <Route path="/icons-themify" component={Themify_icons} exact /> */}
 
